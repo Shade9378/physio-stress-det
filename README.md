@@ -1,6 +1,6 @@
 # Wear OS App for Stress Detection
 
-com
+Native Wear OS app for stress detection using physiological and motion signals with local machine learning inference.
 
 [Technical details](outputs/technical_details.md) | [Training results](outputs/training_results.md)
 
