@@ -12,7 +12,7 @@ com
 
 Requires Python 3.11, JDK 17 and Android SDK 34 with Build Tools 34.0.0.
 
-Clone the repository, then download `physio-model-assets-v1.zip` and `SHA256SUMS` from **Releases**. From the project root:
+Clone the repository, then download `physio-model-assets-v1.zip` and `SHA256SUMS` from [**Releases**](https://github.com/Shade9378/physio-stress-det/releases/tag/pretrained-models-v1). From the project root:
 
 ```sh
 python scripts/model_assets.py install --archive /path/to/physio-model-assets-v1.zip --checksum /path/to/SHA256SUMS
