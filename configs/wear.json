@@ -1,0 +1,28 @@
+{
+  "seed": 2024,
+  "window_seconds": 60,
+  "stride_seconds": 10,
+  "bin_hz": 16,
+  "gravity_m_s2": 9.80665,
+  "wesad_acc_units_per_g": 64,
+  "c_candidates": [
+    0.1,
+    1,
+    10
+  ],
+  "inner_subject_folds": 3,
+  "deployment_held_out": "S2",
+  "model": "acc_magnitude_mlp",
+  "live_status": "experimental_domain_transfer",
+  "feature_names": [
+    "mean_g",
+    "std_g",
+    "range_g",
+    "mean_absolute_delta_g",
+    "rms_delta_g",
+    "fraction_dynamic"
+  ],
+  "model_family": "mlp",
+  "model_id": "acc_mlp_s2_seed2024_v1",
+  "deployment_seed": 2024
+}

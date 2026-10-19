@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==75.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physio-stress-det"
+version = "0.1.0"
+requires-python = ">=3.10,<3.13"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["notes/tests"]
+cache_dir = "results/cache/pytest"
+
+[tool.ruff]
+cache-dir = "results/cache/ruff"
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]
+"experiments/**/*.py" = ["E402"]
+"notes/**/*.py" = ["E402"]

@@ -1,0 +1,78 @@
+# local data and generated outputs
+/data/
+/results/
+/notes/
+/experiments/
+/.github/modernize/
+
+# python environments, caches and packaging
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+/dist/
+/build/
+
+# tests and validation artifacts
+tests/
+test/
+androidTest/
+validation/
+validations/
+*.log
+*.tmp
+
+# android local configuration, caches and build products
+local.properties
+.gradle/
+.kotlin/
+.cxx/
+.externalNativeBuild/
+android/**/build/
+*.apk
+*.aab
+*.apks
+*.dex
+*.hprof
+
+# vendor sdk packages
+*.aar
+*.zip
+**/samsung-health-sensor-sdk*/
+**/samsung-health-sensor-api*/
+**/samsung-health-sensor-api*.jar
+
+# generated model, dataset and replay artifacts
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+*.tflite
+*.npy
+*.npz
+*.h5
+*.hdf5
+/android/app/src/**/assets/generated/
+
+# other local stuffs
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~

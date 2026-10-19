@@ -1,0 +1,17 @@
+{
+  "hidden": 16,
+  "epochs": [
+    60,
+    160
+  ],
+  "learning_rate": 0.01,
+  "weight_decay": 0.001,
+  "tuning_seed": 2024,
+  "seeds": [
+    2024,
+    17,
+    42
+  ],
+  "inner_subject_folds": 3,
+  "threads": 2
+}

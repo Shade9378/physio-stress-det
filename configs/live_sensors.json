@@ -1,0 +1,58 @@
+{
+  "dependency_release_limit": "2025-12-31",
+  "standard_provider": {
+    "acceleration": "SensorManager.TYPE_ACCELEROMETER",
+    "heart_rate": "Health Services HEART_RATE_BPM; display only",
+    "inference_inputs": [
+      "ACC"
+    ]
+  },
+  "samsung_provider": {
+    "sdk_version": "1.4.1",
+    "sdk_release_dates": [
+      "2025-08-20"
+    ],
+    "minimum_health_sensor_service": "1.6.5",
+    "binary_available": true,
+    "binary_checksum": "893cd5d6564db0f304bf511a555c1d65ca6bccc8475fc979ff1d71d50680344c",
+    "supported_trackers": [
+      "PPG_CONTINUOUS (GREEN)",
+      "EDA_CONTINUOUS",
+      "SKIN_TEMPERATURE_CONTINUOUS"
+    ],
+    "permissions": [
+      "android.permission.BODY_SENSORS"
+    ],
+    "physical_watch_validated": false,
+    "hardware": {
+      "PPG": "Galaxy Watch4+",
+      "TEMP": "Galaxy Watch5+ with suitable firmware",
+      "EDA": "Galaxy Watch8+; runtime capability check required"
+    },
+    "compiled_with_supplied_binary": true
+  },
+  "excluded": {
+    "ambient_temperature": "Not interchangeable with contact skin temperature",
+    "BPM": "Not interchangeable with raw optical PPG",
+    "other_health_metrics": "No corresponding trained WESAD inputs"
+  },
+  "model_contract": {
+    "window_seconds": 60,
+    "ppg_hz": 25,
+    "skin_temperature_hz": 1,
+    "skin_temperature_sdk_rate_guaranteed": false,
+    "normalization": "PPG window bandpass 0.5\u20138 Hz, z-score; training-only learned scaling",
+    "alignment": "Common timestamped window; interpolate only between adjacent samples <=2 periods apart; no extrapolation or long-gap fill",
+    "fallback": "Use exact complete sensor subset; require ACC; never pad missing modalities",
+    "eda_hz": 1,
+    "eda_preprocessing": "0.2Hz low-pass at 1Hz; seven window statistics. Does not claim to recover 4Hz WESAD SCR morphology."
+  },
+  "sources": [
+    "https://developer.samsung.com/health/sensor/release-note.html",
+    "https://developer.samsung.com/health/sensor/api-reference/overview-summary.html",
+    "https://developer.samsung.com/health/sensor/guide/data-specifications.html",
+    "https://developer.samsung.com/health/sensor/guide/tracking-data.html",
+    "https://developer.samsung.com/health/sensor/guide/developer-mode.html"
+  ],
+  "dependency_manifest": "results/reports/historical_dependencies_2025.json"
+}
